@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sseruyange Marvin | Software Engineering Student</title>
+  <meta name="description" content="Portfolio of Sseruyange Marvin — Software Engineering Student at Victoria University, Frontend Developer, Problem Solver.">
+  <meta name="keywords" content="Sseruyange Marvin, Software Engineer, Frontend Developer, Victoria University, Portfolio">
+  <meta name="author" content="Sseruyange Marvin">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Sseruyange Marvin | Portfolio">
+  <meta property="og:description" content="Software Engineering Student | Frontend Developer | Problem Solver">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://marvin-portfolio.vercel.app">
+  <meta property="og:image" content="./assets/image/latino.jpeg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sseruyange Marvin | Portfolio">
+  <meta name="twitter:description" content="Software Engineering Student | Frontend Developer | Problem Solver">
+
+  <link rel="icon" type="image/jpeg" href="./assets/image/latino.jpeg">
+  <link rel="apple-touch-icon" href="./assets/image/latino.jpeg">
+
+  <!-- Preconnect to CDNs for faster resource loading -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="portfolio-data.json" as="fetch">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">
+        <img src="./assets/image/latino.jpeg" alt="Marvin">
+        <div class="loader-ring"></div>
+      </div>
+      <div class="loader-text">
+        <span class="loader-name">Sseruyange Marvin</span>
+        <span class="loader-tagline">Loading<span class="loader-dots">...</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Offline Banner -->
+  <div id="offline-banner">
+    <i class="fas fa-wifi-slash"></i> You are offline — some content may not load
+  </div>
+
+  <!-- Scroll To Top -->
+  <button id="scroll-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <img src="./assets/image/latino.jpeg" alt="Marvin logo" loading="lazy">
+        <span>Marvin</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#timeline" class="nav-link">Timeline</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button id="menu-toggle" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-container">
+      <div class="hero-text reveal">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Sseruyange <span class="highlight">Marvin</span></h1>
+        <div class="hero-typing">
+          <span class="typing-text"></span>
+          <span class="typing-cursor">|</span>
+        </div>
+        <p class="hero-desc">Aspiring software engineer, passionate about coding and problem-solving. Committed to learning, adapting, and contributing tech solutions.</p>
+        <div class="hero-buttons">
+          <a id="cv-download-btn" href="./resume/cv.html" class="btn btn-primary" style="display:none">
+            <i class="fas fa-download"></i> Download CV
+          </a>
+          <a href="#contact" class="btn btn-secondary">Hire Me</a>
+          <a href="#projects" class="btn btn-outline">View Projects</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.link/k17nbw" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="https://x.com" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div class="hero-image reveal">
+        <div class="hero-img-wrapper">
+          <img src="./assets/image/latino.jpeg" alt="Sseruyange Marvin" loading="eager">
+          <div class="hero-img-ring"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">About <span class="highlight">Me</span></h2>
+      <p class="section-sub reveal">Get to know me better</p>
+      <div class="about-content">
+        <div class="about-image reveal">
+          <img src="./assets/image/latino.jpeg" alt="About Marvin" loading="lazy">
+        </div>
+        <div class="about-text reveal">
+          <h3>Software Engineering Student at <span class="highlight">Victoria University</span></h3>
+          <p>
+            Passionate first-year software engineering student dedicated to mastering the art of coding.
+            Eager to explore diverse facets of technology, from algorithm design to web development.
+            Enthusiastic about problem-solving and collaborating on innovative projects.
+          </p>
+          <p>
+            Proficient in languages like Java, HTML, CSS, PHP, and JavaScript. Constantly seeking
+            opportunities to expand my skills and contribute to the ever-evolving tech landscape.
+            Interested in AI and emerging technologies.
+          </p>
+          <div class="about-cards">
+            <div class="about-card">
+              <i class="fas fa-graduation-cap"></i>
+              <h4>Education</h4>
+              <p>BSc Software Engineering<br>Victoria University</p>
+            </div>
+            <div class="about-card">
+              <i class="fas fa-briefcase"></i>
+              <h4>Experience</h4>
+              <p>Frontend Projects<br>Web Applications</p>
+            </div>
+            <div class="about-card">
+              <i class="fas fa-trophy"></i>
+              <h4>Achievements</h4>
+              <p>Multiple Web Dev Projects<br>Problem Solving</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">My <span class="highlight">Skills</span></h2>
+      <p class="section-sub reveal">Technologies and tools I work with</p>
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <h3><i class="fas fa-code"></i> Programming</h3>
+          <div id="skills-programming" class="skill-items"></div>
+        </div>
+        <div class="skill-category reveal">
+          <h3><i class="fas fa-layer-group"></i> Frameworks</h3>
+          <div id="skills-frameworks" class="skill-items"></div>
+        </div>
+        <div class="skill-category reveal">
+          <h3><i class="fas fa-tools"></i> Tools</h3>
+          <div id="skills-tools" class="tech-grid"></div>
+        </div>
+        <div class="skill-category reveal">
+          <h3><i class="fas fa-users"></i> Soft Skills</h3>
+          <div id="skills-soft" class="soft-grid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">My <span class="highlight">Projects</span></h2>
+      <p class="section-sub reveal">Some of my recent work</p>
+      <div id="project-filters" class="project-filters reveal"></div>
+      <div id="projects-grid" class="projects-grid"></div>
+    </div>
+  </section>
+
+  <!-- TIMELINE SECTION -->
+  <section id="timeline" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">My <span class="highlight">Journey</span></h2>
+      <p class="section-sub reveal">The path so far</p>
+      <div id="timeline-container" class="timeline"></div>
+    </div>
+  </section>
+
+  <!-- STATS SECTION -->
+  <section id="stats" class="section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <i class="fas fa-project-diagram"></i>
+          <span class="stat-number" data-target="6">0</span>
+          <p>Projects Completed</p>
+        </div>
+        <div class="stat-card reveal">
+          <i class="fas fa-code"></i>
+          <span class="stat-number" data-target="12">0</span>
+          <p>Technologies Learned</p>
+        </div>
+        <div class="stat-card reveal">
+          <i class="fab fa-github"></i>
+          <span class="stat-number" data-target="15">0</span>
+          <p>GitHub Repositories</p>
+        </div>
+        <div class="stat-card reveal">
+          <i class="fas fa-clock"></i>
+          <span class="stat-number" data-target="500">0</span>
+          <p>Hours Coding</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">What People <span class="highlight">Say</span></h2>
+      <p class="section-sub reveal">Feedback from peers and mentors</p>
+      <div class="testimonials-carousel reveal">
+        <div id="testimonial-track" class="testimonial-track"></div>
+        <div class="carousel-controls">
+          <button class="carousel-btn prev-btn" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+          <div id="carousel-dots" class="carousel-dots"></div>
+          <button class="carousel-btn next-btn" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">Get In <span class="highlight">Touch</span></h2>
+      <p class="section-sub reveal">Have a project or just want to say hi? Drop me a message!</p>
+      <div class="contact-content reveal">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Location</h4>
+              <p>Kampala, Uganda</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p>sseruyangemarvin772@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>Phone</h4>
+              <p>+256 772 753 208</p>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.link/k17nbw" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://x.com" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="name" name="name" required placeholder=" ">
+              <label for="name">Full Name</label>
+              <span class="form-error"></span>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" required placeholder=" ">
+              <label for="email">Email</label>
+              <span class="form-error"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject" name="subject" required placeholder=" ">
+            <label for="subject">Subject</label>
+            <span class="form-error"></span>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+            <label for="message">Message</label>
+            <span class="form-error"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <div id="form-notification" class="form-notification"></div>
+          <p style="font-size:0.8rem;color:var(--text-muted);margin-top:8px;text-align:center;">
+            Or email directly: <strong id="contact-fallback-email">sseruyangemarvin772@gmail.com</strong>
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h3>Sseruyange <span class="highlight">Marvin</span></h3>
+          <p>Software Engineering Student passionate about building innovative digital solutions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="./admin/index.html" target="_blank"><i class="fas fa-lock"></i> Admin</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Social Links</h4>
+          <div class="footer-socials">
+            <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.link/k17nbw" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://x.com" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Location</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sseruyange Marvin. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="floating-wa" href="https://wa.me/256772753208?text=Hi%20Marvin,%20I%20like%20the%20way%20you%20do%20your%20work%20and%20I%20want%20to%20hire%20you" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script defer src="js/app.js?v=15"></script>
+</body>
+</html>
